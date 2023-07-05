@@ -1,1 +1,15 @@
 
+.head{
+    height: 10vh;
+    background-color: #06131f;
+}
+
+.card{
+    background-color: #112030;
+    color: white;
+}
+
+
+body{
+    background-color: #1d2d3c;
+}
