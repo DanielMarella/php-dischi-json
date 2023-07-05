@@ -2,10 +2,25 @@ const { createApp } = Vue;
 
 
 createApp({
-    setup() {
+    data() {
         const message = ('Hello vue!')
         return {
             message
         }
-    }
+    },
+
+    methods: {
+        axios.get('')
+        .then(function (response) {
+
+            console.log(response);
+        })
+        .catch(function (error) {
+
+            console.log(error);
+        })
+    },
+
+
+
 }).mount('#app')
