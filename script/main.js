@@ -3,24 +3,29 @@ const { createApp } = Vue;
 
 createApp({
     data() {
-        const message = ('Hello vue!')
         return {
-            message
+
+            apiUrl : './server.php',
+            items : [],
         }
     },
 
     methods: {
-        axios.get('')
-        .then(function (response) {
-
-            console.log(response);
-        })
-        .catch(function (error) {
-
-            console.log(error);
-        })
+        getItems(){
+            axios.get(this.apiUrl, {
+            })
+            .then((response)=> {
+                console.log(response.data);
+                this.items = response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        }
     },
 
-
+    created() {
+        this.getItems();
+    },
 
 }).mount('#app')
