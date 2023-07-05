@@ -5,5 +5,5 @@
     header('Content-Type: application/json');
     echo json_encode($dischi);
 
-    // var_dump($stringRawData, $todoList);
+
 ?>
